@@ -35,6 +35,7 @@
             Size = new Size(20, 20);
             Text = " ";
             Click += FieldButton_Click;
+            MouseDown += FieldButton_MouseDown;
             ResumeLayout(false);
         }
 

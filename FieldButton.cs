@@ -129,5 +129,18 @@ namespace MineSweeper
         {
             IsOpen = true;
         }
+
+        private void FieldButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Right)
+            {
+                return;
+            }
+            if (IsOpen)
+            {
+                return;
+            }
+            Text = Text == "F" ? " " : "F";
+        }
     }
 }
