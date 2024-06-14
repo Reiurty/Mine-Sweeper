@@ -16,6 +16,7 @@ namespace MineSweeper
         private int _x, _y;
         private bool _isMine = true;
         private bool _isOpen = false;
+        private Form1 _form;
         private List<List<FieldButton>> _buttons;
 
         public bool IsMine
@@ -116,18 +117,21 @@ namespace MineSweeper
             }
         }
 
-        public FieldButton(List<List<FieldButton>> buttons)
+        public FieldButton(List<List<FieldButton>> buttons, Form1 form)
         {
             InitializeComponent();
             Size = new Size(25, 25);
             _buttons = buttons;
+            _form = form;
         }
-
-
 
         private void FieldButton_Click(object sender, EventArgs e)
         {
             IsOpen = true;
+            if (IsMine)
+            {
+                _form.GameOver();
+            }
         }
 
         private void FieldButton_MouseDown(object sender, MouseEventArgs e)

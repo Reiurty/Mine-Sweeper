@@ -14,7 +14,7 @@ namespace MineSweeper
                 List<FieldButton> row = new List<FieldButton>();
                 for (int j = 0; j < 10; j++)
                 {
-                    FieldButton btn = new FieldButton(_buttons);
+                    FieldButton btn = new FieldButton(_buttons, this);
                     btn.Pos = new Point(i, j);
                     //btn.IsMine = (i + j) % 2 == 0;
                     panel1.Controls.Add(btn);
@@ -58,5 +58,20 @@ namespace MineSweeper
         {
             placeMines();
         }
+
+        public void GameOver()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (_buttons[i][j].IsMine)
+                    {
+                        _buttons[i][j].IsOpen = true;
+                    }
+                }
+            }
+        }
+
     }
 }
