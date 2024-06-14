@@ -52,6 +52,29 @@ namespace MineSweeper
             return count;
         }
 
+        void OpenNeighbors()
+        {
+            for (int i = _x - 1; i <= _x + 1; i++)
+            {
+                if (i < 0 || i >= _buttons.Count)
+                {
+                    continue;
+                }
+                for (int j = _y - 1; j <= _y + 1; j++)
+                {
+                    if (j < 0 || j >= _buttons[0].Count)
+                    {
+                        continue;
+                    }
+                    if (_buttons[i][j].IsOpen)
+                    {
+                        continue;
+                    }
+                    _buttons[i][j].IsOpen = true;
+                }
+            }
+        }
+
         public bool IsOpen
         {
             get => _isOpen;
@@ -72,6 +95,10 @@ namespace MineSweeper
                     {
                         int count = CalcMines();
                         Text = count == 0 ? " " : count.ToString();
+                        if (count == 0)
+                        {
+                            OpenNeighbors();
+                        }
                     }
                 }
                 FlatStyle = _isOpen ? FlatStyle.Flat : FlatStyle.Standard;
