@@ -30,13 +30,14 @@
         {
             button1 = new Button();
             panel1 = new Panel();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(343, 12);
+            button1.Location = new Point(179, 12);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(63, 59);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = false;
@@ -44,21 +45,31 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(178, 41);
+            panel1.Location = new Point(12, 77);
             panel1.Name = "panel1";
             panel1.Size = new Size(411, 361);
             panel1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(45, 31);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(432, 450);
+            Controls.Add(textBox1);
             Controls.Add(panel1);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -67,5 +78,6 @@
         private Panel panel1;
         private Button button2;
         private FieldButton fieldButton1;
+        private TextBox textBox1;
     }
 }

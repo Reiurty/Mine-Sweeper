@@ -4,6 +4,9 @@ namespace MineSweeper
 {
     public partial class Form1 : Form
     {
+        private System.Windows.Forms.Timer gameTimer;
+        private int secondsElapsed;
+
         List<List<FieldButton>> _buttons;
         public Form1()
         {
@@ -23,6 +26,17 @@ namespace MineSweeper
                 _buttons.Add(row);
             }
             placeMines();
+
+            gameTimer = new System.Windows.Forms.Timer();
+            gameTimer.Interval = 1000;
+            gameTimer.Tick += new EventHandler(gameTimer_Tick);
+            secondsElapsed = 0;
+        }
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            secondsElapsed++;
+            textBox1.Text = secondsElapsed.ToString();
         }
 
         void placeMines()
@@ -56,11 +70,15 @@ namespace MineSweeper
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            gameTimer.Stop();
+            secondsElapsed = 0;
+            textBox1.Text = "0";
             placeMines();
         }
 
         public void GameOver()
         {
+            gameTimer.Stop();
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
@@ -73,5 +91,9 @@ namespace MineSweeper
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
