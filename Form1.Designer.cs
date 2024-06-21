@@ -39,6 +39,7 @@
             // 
             // restartBtn
             // 
+            restartBtn.Anchor = AnchorStyles.Top;
             restartBtn.Location = new Point(259, 12);
             restartBtn.Name = "restartBtn";
             restartBtn.Size = new Size(63, 59);
@@ -49,6 +50,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Location = new Point(12, 77);
             panel1.Name = "panel1";
             panel1.Size = new Size(555, 497);
@@ -65,6 +67,7 @@
             // 
             // minesText
             // 
+            minesText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             minesText.Location = new Point(398, 31);
             minesText.Name = "minesText";
             minesText.Size = new Size(100, 23);
@@ -73,6 +76,7 @@
             // 
             // easyBtn
             // 
+            easyBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             easyBtn.Location = new Point(9, 580);
             easyBtn.Name = "easyBtn";
             easyBtn.Size = new Size(63, 25);
@@ -83,6 +87,7 @@
             // 
             // normalBtn
             // 
+            normalBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             normalBtn.Location = new Point(78, 580);
             normalBtn.Name = "normalBtn";
             normalBtn.Size = new Size(63, 25);
@@ -93,6 +98,7 @@
             // 
             // hardBtn
             // 
+            hardBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             hardBtn.Location = new Point(147, 580);
             hardBtn.Name = "hardBtn";
             hardBtn.Size = new Size(63, 25);

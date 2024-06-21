@@ -7,7 +7,7 @@ namespace MineSweeper
         private System.Windows.Forms.Timer gameTimer;
         private int secondsElapsed;
         public int minesCount = 10;
-        int fieldWidth = 10, fieldHeight = 10;
+        int fieldWidth = 9, fieldHeight = 9;
 
         List<List<FieldButton>> _buttons;
         public Form1()
@@ -20,8 +20,6 @@ namespace MineSweeper
             gameTimer.Interval = 1000;
             gameTimer.Tick += new EventHandler(gameTimer_Tick);
             secondsElapsed = 0;
-            timerText.Text = "0";
-            minesText.Text = minesCount.ToString();
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -128,20 +126,23 @@ namespace MineSweeper
             }
 
             placeMines();
+
+            timerText.Text = "0";
+            minesText.Text = minesCount.ToString();
         }
         private void easyBtn_Click(object sender, EventArgs e)
         {
-            setField(10, 10, 10);
+            setField(9, 9, 10);
         }
 
         private void normalBtn_Click(object sender, EventArgs e)
         {
-            setField(30, 30, 40);
+            setField(16, 16, 40);
         }
 
         private void hardBtn_Click(object sender, EventArgs e)
         {
-            setField(30, 50, 100);
+            setField(30, 16, 99);
         }
 
         private void minesText_TextChanged(object sender, EventArgs e)
