@@ -111,6 +111,7 @@ namespace MineSweeper
             fieldWidth = width;
             fieldHeight = heigth;
             minesCount = mines;
+
             panel1.Controls.Clear();
             _buttons = new List<List<FieldButton>>();
             for (int i = 0; i < fieldWidth; i++)
