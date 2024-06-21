@@ -6,27 +6,15 @@ namespace MineSweeper
     {
         private System.Windows.Forms.Timer gameTimer;
         private int secondsElapsed;
-        public int minesCount = 15;
+        public int minesCount = 10;
+        int fieldWidth = 10, fieldHeight = 10;
 
         List<List<FieldButton>> _buttons;
         public Form1()
         {
             InitializeComponent();
-            _buttons = new List<List<FieldButton>>();
-            for (int i = 0; i < 10; i++)
-            {
-                List<FieldButton> row = new List<FieldButton>();
-                for (int j = 0; j < 10; j++)
-                {
-                    FieldButton btn = new FieldButton(_buttons, this);
-                    btn.Pos = new Point(i, j);
-                    //btn.IsMine = (i + j) % 2 == 0;
-                    panel1.Controls.Add(btn);
-                    row.Add(btn);
-                }
-                _buttons.Add(row);
-            }
-            placeMines();
+
+            easyBtn_Click(null, null);
 
             gameTimer = new System.Windows.Forms.Timer();
             gameTimer.Interval = 1000;
@@ -44,9 +32,9 @@ namespace MineSweeper
 
         void placeMines()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < fieldWidth; i++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j < fieldHeight; j++)
                 {
                     _buttons[i][j].IsOpen = false;
                     _buttons[i][j].IsMine = false;
@@ -81,9 +69,9 @@ namespace MineSweeper
         public void GameOver()
         {
             gameTimer.Stop();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < fieldWidth; i++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j < fieldHeight; j++)
                 {
                     if (_buttons[i][j].IsMine)
                     {
@@ -96,9 +84,9 @@ namespace MineSweeper
         public void FieldButtonClicked(FieldButton btn)
         {
             int h = 0;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < fieldWidth; i++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j < fieldHeight; j++)
                 {
                     if (_buttons[i][j].Text == "F")
                     {
@@ -114,6 +102,48 @@ namespace MineSweeper
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        void setField(int width, int heigth, int mines)
+        {
+            fieldWidth = width;
+            fieldHeight = heigth;
+            minesCount = mines;
+            panel1.Controls.Clear();
+            _buttons = new List<List<FieldButton>>();
+            for (int i = 0; i < fieldWidth; i++)
+            {
+                List<FieldButton> row = new List<FieldButton>();
+                for (int j = 0; j < fieldHeight; j++)
+                {
+                    FieldButton btn = new FieldButton(_buttons, this);
+                    btn.Pos = new Point(i, j);
+                    panel1.Controls.Add(btn);
+                    row.Add(btn);
+                }
+                _buttons.Add(row);
+            }
+
+            placeMines();
+        }
+        private void easyBtn_Click(object sender, EventArgs e)
+        {
+            setField(10, 10, 10);
+        }
+
+        private void normalBtn_Click(object sender, EventArgs e)
+        {
+            setField(30, 30, 40);
+        }
+
+        private void hardBtn_Click(object sender, EventArgs e)
+        {
+            setField(30, 50, 100);
+        }
+
+        private void minesText_TextChanged(object sender, EventArgs e)
         {
 
         }

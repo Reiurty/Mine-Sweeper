@@ -32,11 +32,14 @@
             panel1 = new Panel();
             timerText = new TextBox();
             minesText = new TextBox();
+            easyBtn = new Button();
+            normalBtn = new Button();
+            hardBtn = new Button();
             SuspendLayout();
             // 
             // restartBtn
             // 
-            restartBtn.Location = new Point(179, 12);
+            restartBtn.Location = new Point(259, 12);
             restartBtn.Name = "restartBtn";
             restartBtn.Size = new Size(63, 59);
             restartBtn.TabIndex = 0;
@@ -48,12 +51,12 @@
             // 
             panel1.Location = new Point(12, 77);
             panel1.Name = "panel1";
-            panel1.Size = new Size(411, 361);
+            panel1.Size = new Size(555, 497);
             panel1.TabIndex = 1;
             // 
             // timerText
             // 
-            timerText.Location = new Point(12, 31);
+            timerText.Location = new Point(78, 31);
             timerText.Name = "timerText";
             timerText.Size = new Size(100, 23);
             timerText.TabIndex = 2;
@@ -62,16 +65,51 @@
             // 
             // minesText
             // 
-            minesText.Location = new Point(323, 31);
+            minesText.Location = new Point(398, 31);
             minesText.Name = "minesText";
             minesText.Size = new Size(100, 23);
             minesText.TabIndex = 3;
+            minesText.TextChanged += minesText_TextChanged;
+            // 
+            // easyBtn
+            // 
+            easyBtn.Location = new Point(9, 580);
+            easyBtn.Name = "easyBtn";
+            easyBtn.Size = new Size(63, 25);
+            easyBtn.TabIndex = 1;
+            easyBtn.Text = "Easy";
+            easyBtn.UseVisualStyleBackColor = false;
+            easyBtn.Click += easyBtn_Click;
+            // 
+            // normalBtn
+            // 
+            normalBtn.Location = new Point(78, 580);
+            normalBtn.Name = "normalBtn";
+            normalBtn.Size = new Size(63, 25);
+            normalBtn.TabIndex = 4;
+            normalBtn.Text = "Normal";
+            normalBtn.UseVisualStyleBackColor = false;
+            normalBtn.Click += normalBtn_Click;
+            // 
+            // hardBtn
+            // 
+            hardBtn.Location = new Point(147, 580);
+            hardBtn.Name = "hardBtn";
+            hardBtn.Size = new Size(63, 25);
+            hardBtn.TabIndex = 2;
+            hardBtn.Text = "Hard";
+            hardBtn.UseVisualStyleBackColor = false;
+            hardBtn.UseWaitCursor = true;
+            hardBtn.Click += hardBtn_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(432, 450);
+            ClientSize = new Size(579, 617);
+            Controls.Add(hardBtn);
+            Controls.Add(normalBtn);
+            Controls.Add(easyBtn);
             Controls.Add(minesText);
             Controls.Add(timerText);
             Controls.Add(panel1);
@@ -90,5 +128,8 @@
         private FieldButton fieldButton1;
         private TextBox timerText;
         private TextBox minesText;
+        private Button easyBtn;
+        private Button normalBtn;
+        private Button hardBtn;
     }
 }
