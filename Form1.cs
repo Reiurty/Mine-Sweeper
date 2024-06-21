@@ -91,6 +91,14 @@ namespace MineSweeper
             }
         }
 
+        public void FieldButtonClicked(FieldButton btn)
+        {
+            if (!gameTimer.Enabled)
+            {
+                gameTimer.Start();
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

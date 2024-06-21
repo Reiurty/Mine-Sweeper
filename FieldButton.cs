@@ -128,6 +128,7 @@ namespace MineSweeper
         private void FieldButton_Click(object sender, EventArgs e)
         {
             IsOpen = true;
+            _form.FieldButtonClicked(this);
             if (IsMine)
             {
                 _form.GameOver();
