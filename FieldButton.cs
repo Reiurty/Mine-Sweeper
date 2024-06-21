@@ -146,6 +146,7 @@ namespace MineSweeper
                 return;
             }
             Text = Text == "F" ? " " : "F";
+            _form.FieldButtonClicked(this);
         }
     }
 }

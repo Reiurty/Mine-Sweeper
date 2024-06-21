@@ -6,6 +6,7 @@ namespace MineSweeper
     {
         private System.Windows.Forms.Timer gameTimer;
         private int secondsElapsed;
+        public int minesCount = 15;
 
         List<List<FieldButton>> _buttons;
         public Form1()
@@ -31,12 +32,14 @@ namespace MineSweeper
             gameTimer.Interval = 1000;
             gameTimer.Tick += new EventHandler(gameTimer_Tick);
             secondsElapsed = 0;
+            timerText.Text = "0";
+            minesText.Text = minesCount.ToString();
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             secondsElapsed++;
-            textBox1.Text = secondsElapsed.ToString();
+            timerText.Text = secondsElapsed.ToString();
         }
 
         void placeMines()
@@ -52,9 +55,8 @@ namespace MineSweeper
 
             Random random = new Random();
             int minesPlaced = 0;
-            int totalMines = 15;
 
-            while (minesPlaced < totalMines)
+            while (minesPlaced < minesCount)
             {
                 int randomX = random.Next(0, _buttons.Count);
                 int randomY = random.Next(0, _buttons[0].Count);
@@ -72,7 +74,7 @@ namespace MineSweeper
         {
             gameTimer.Stop();
             secondsElapsed = 0;
-            textBox1.Text = "0";
+            timerText.Text = "0";
             placeMines();
         }
 
@@ -93,6 +95,18 @@ namespace MineSweeper
 
         public void FieldButtonClicked(FieldButton btn)
         {
+            int h = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (_buttons[i][j].Text == "F")
+                    {
+                        h++;
+                    }
+                }
+            }
+            minesText.Text = (minesCount - h).ToString();
             if (!gameTimer.Enabled)
             {
                 gameTimer.Start();

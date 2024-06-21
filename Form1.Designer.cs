@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            restartBtn = new Button();
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            timerText = new TextBox();
+            minesText = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // restartBtn
             // 
-            button1.Location = new Point(179, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(63, 59);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            restartBtn.Location = new Point(179, 12);
+            restartBtn.Name = "restartBtn";
+            restartBtn.Size = new Size(63, 59);
+            restartBtn.TabIndex = 0;
+            restartBtn.Text = "Restart";
+            restartBtn.UseVisualStyleBackColor = false;
+            restartBtn.Click += button1_Click;
             // 
             // panel1
             // 
@@ -50,34 +51,44 @@
             panel1.Size = new Size(411, 361);
             panel1.TabIndex = 1;
             // 
-            // textBox1
+            // timerText
             // 
-            textBox1.Location = new Point(45, 31);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            timerText.Location = new Point(12, 31);
+            timerText.Name = "timerText";
+            timerText.Size = new Size(100, 23);
+            timerText.TabIndex = 2;
+            timerText.TextAlign = HorizontalAlignment.Center;
+            timerText.TextChanged += textBox1_TextChanged;
+            // 
+            // minesText
+            // 
+            minesText.Location = new Point(323, 31);
+            minesText.Name = "minesText";
+            minesText.Size = new Size(100, 23);
+            minesText.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(432, 450);
-            Controls.Add(textBox1);
+            Controls.Add(minesText);
+            Controls.Add(timerText);
             Controls.Add(panel1);
-            Controls.Add(button1);
+            Controls.Add(restartBtn);
             Name = "Form1";
-            Text = "Form1";
+            Text = "MineSweeper";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
+        private Button restartBtn;
         private Panel panel1;
         private Button button2;
         private FieldButton fieldButton1;
-        private TextBox textBox1;
+        private TextBox timerText;
+        private TextBox minesText;
     }
 }
