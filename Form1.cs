@@ -20,6 +20,17 @@ namespace MineSweeper
             gameTimer.Interval = 1000;
             gameTimer.Tick += new EventHandler(gameTimer_Tick);
             secondsElapsed = 0;
+
+            for (int i = 0; i < fieldWidth; i++)
+            {
+                for (int j = 0; j < fieldHeight; j++)
+                {
+                    if (!_buttons[i][j].IsMine && _buttons[i][j].IsOpen == true && minesCount == 0)
+                    {
+                        victory();
+                    }
+                }
+            }
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -58,6 +69,7 @@ namespace MineSweeper
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            restartBtn.BackgroundImage = Image.FromFile("D:\\Проекты\\MineSweeper\\Resources\\Usual Icon1.jpg");
             gameTimer.Stop();
             secondsElapsed = 0;
             timerText.Text = "0";
@@ -66,6 +78,7 @@ namespace MineSweeper
 
         public void GameOver()
         {
+            restartBtn.BackgroundImage = Image.FromFile("D:\\Проекты\\MineSweeper\\Resources\\Defeat Icon1.jpg");
             gameTimer.Stop();
             for (int i = 0; i < fieldWidth; i++)
             {
@@ -130,24 +143,35 @@ namespace MineSweeper
             timerText.Text = "0";
             minesText.Text = minesCount.ToString();
         }
+
         private void easyBtn_Click(object sender, EventArgs e)
         {
+            restartBtn.BackgroundImage = Image.FromFile("D:\\Проекты\\MineSweeper\\Resources\\Usual Icon1.jpg");
             setField(9, 9, 10);
             this.Size = new Size(283, 404);
+            minesText.Location = new Point(177, 31);
+            timerText.Location = new Point(19, 31);
         }
 
         private void normalBtn_Click(object sender, EventArgs e)
         {
+            restartBtn.BackgroundImage = Image.FromFile("D:\\Проекты\\MineSweeper\\Resources\\Usual Icon1.jpg");
             setField(16, 16, 40);
             this.Size = new Size(472, 480);
         }
 
         private void hardBtn_Click(object sender, EventArgs e)
         {
+            restartBtn.BackgroundImage = Image.FromFile("D:\\Проекты\\MineSweeper\\Resources\\Usual Icon1.jpg");
             setField(30, 16, 99);
             this.Size = new Size(848, 598);
         }
 
+        public void victory()
+        {
+            gameTimer.Stop(); 
+            restartBtn.BackgroundImage = Image.FromFile("D:\\Проекты\\MineSweeper\\Resources\\Victory Icon1.jpg");
+        }
         private void minesText_TextChanged(object sender, EventArgs e)
         {
 

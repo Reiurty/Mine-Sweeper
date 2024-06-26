@@ -40,9 +40,9 @@
             // restartBtn
             // 
             restartBtn.Anchor = AnchorStyles.Top;
-            restartBtn.BackgroundImage = Properties.Resources.Usual_Icon;
+            restartBtn.BackgroundImage = Properties.Resources.Defeat_Icon;
             restartBtn.BackgroundImageLayout = ImageLayout.Zoom;
-            restartBtn.Location = new Point(377, 12);
+            restartBtn.Location = new Point(97, 12);
             restartBtn.Name = "restartBtn";
             restartBtn.Size = new Size(63, 59);
             restartBtn.TabIndex = 0;
@@ -55,14 +55,14 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Location = new Point(12, 77);
             panel1.Name = "panel1";
-            panel1.Size = new Size(790, 427);
+            panel1.Size = new Size(230, 243);
             panel1.TabIndex = 1;
             // 
             // timerText
             // 
-            timerText.Location = new Point(78, 31);
+            timerText.Location = new Point(166, 31);
             timerText.Name = "timerText";
-            timerText.Size = new Size(100, 23);
+            timerText.Size = new Size(72, 23);
             timerText.TabIndex = 2;
             timerText.TextAlign = HorizontalAlignment.Center;
             timerText.TextChanged += textBox1_TextChanged;
@@ -70,16 +70,17 @@
             // minesText
             // 
             minesText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            minesText.Location = new Point(633, 31);
+            minesText.Location = new Point(19, 31);
             minesText.Name = "minesText";
-            minesText.Size = new Size(100, 23);
+            minesText.Size = new Size(72, 23);
             minesText.TabIndex = 3;
+            minesText.TextAlign = HorizontalAlignment.Center;
             minesText.TextChanged += minesText_TextChanged;
             // 
             // easyBtn
             // 
             easyBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            easyBtn.Location = new Point(9, 510);
+            easyBtn.Location = new Point(9, 326);
             easyBtn.Name = "easyBtn";
             easyBtn.Size = new Size(63, 25);
             easyBtn.TabIndex = 1;
@@ -90,7 +91,7 @@
             // normalBtn
             // 
             normalBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            normalBtn.Location = new Point(78, 510);
+            normalBtn.Location = new Point(78, 326);
             normalBtn.Name = "normalBtn";
             normalBtn.Size = new Size(63, 25);
             normalBtn.TabIndex = 4;
@@ -101,7 +102,7 @@
             // hardBtn
             // 
             hardBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            hardBtn.Location = new Point(147, 510);
+            hardBtn.Location = new Point(147, 326);
             hardBtn.Name = "hardBtn";
             hardBtn.Size = new Size(63, 25);
             hardBtn.TabIndex = 2;
@@ -114,7 +115,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(814, 547);
+            ClientSize = new Size(254, 363);
             Controls.Add(hardBtn);
             Controls.Add(normalBtn);
             Controls.Add(easyBtn);
