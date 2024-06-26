@@ -133,16 +133,19 @@ namespace MineSweeper
         private void easyBtn_Click(object sender, EventArgs e)
         {
             setField(9, 9, 10);
+            this.Size = new Size(283, 404);
         }
 
         private void normalBtn_Click(object sender, EventArgs e)
         {
             setField(16, 16, 40);
+            this.Size = new Size(472, 480);
         }
 
         private void hardBtn_Click(object sender, EventArgs e)
         {
             setField(30, 16, 99);
+            this.Size = new Size(848, 598);
         }
 
         private void minesText_TextChanged(object sender, EventArgs e)

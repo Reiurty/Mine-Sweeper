@@ -40,11 +40,13 @@
             // restartBtn
             // 
             restartBtn.Anchor = AnchorStyles.Top;
-            restartBtn.Location = new Point(259, 12);
+            restartBtn.BackgroundImage = Properties.Resources.Usual_Icon;
+            restartBtn.BackgroundImageLayout = ImageLayout.Zoom;
+            restartBtn.Location = new Point(377, 12);
             restartBtn.Name = "restartBtn";
             restartBtn.Size = new Size(63, 59);
             restartBtn.TabIndex = 0;
-            restartBtn.Text = "Restart";
+            restartBtn.Text = " ";
             restartBtn.UseVisualStyleBackColor = false;
             restartBtn.Click += button1_Click;
             // 
@@ -53,7 +55,7 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Location = new Point(12, 77);
             panel1.Name = "panel1";
-            panel1.Size = new Size(555, 497);
+            panel1.Size = new Size(790, 427);
             panel1.TabIndex = 1;
             // 
             // timerText
@@ -68,7 +70,7 @@
             // minesText
             // 
             minesText.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            minesText.Location = new Point(398, 31);
+            minesText.Location = new Point(633, 31);
             minesText.Name = "minesText";
             minesText.Size = new Size(100, 23);
             minesText.TabIndex = 3;
@@ -77,7 +79,7 @@
             // easyBtn
             // 
             easyBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            easyBtn.Location = new Point(9, 580);
+            easyBtn.Location = new Point(9, 510);
             easyBtn.Name = "easyBtn";
             easyBtn.Size = new Size(63, 25);
             easyBtn.TabIndex = 1;
@@ -88,7 +90,7 @@
             // normalBtn
             // 
             normalBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            normalBtn.Location = new Point(78, 580);
+            normalBtn.Location = new Point(78, 510);
             normalBtn.Name = "normalBtn";
             normalBtn.Size = new Size(63, 25);
             normalBtn.TabIndex = 4;
@@ -99,7 +101,7 @@
             // hardBtn
             // 
             hardBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            hardBtn.Location = new Point(147, 580);
+            hardBtn.Location = new Point(147, 510);
             hardBtn.Name = "hardBtn";
             hardBtn.Size = new Size(63, 25);
             hardBtn.TabIndex = 2;
@@ -112,7 +114,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(579, 617);
+            ClientSize = new Size(814, 547);
             Controls.Add(hardBtn);
             Controls.Add(normalBtn);
             Controls.Add(easyBtn);
