@@ -1,0 +1,36 @@
+D:\Проекты\MineSweeper (2)\bin\Debug\net8.0-windows\MineSweeper.exe
+D:\Проекты\MineSweeper (2)\bin\Debug\net8.0-windows\MineSweeper.deps.json
+D:\Проекты\MineSweeper (2)\bin\Debug\net8.0-windows\MineSweeper.runtimeconfig.json
+D:\Проекты\MineSweeper (2)\bin\Debug\net8.0-windows\MineSweeper.dll
+D:\Проекты\MineSweeper (2)\bin\Debug\net8.0-windows\MineSweeper.pdb
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.FieldButton.resources
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.Form1.resources
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.Properties.Resources.resources
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.csproj.GenerateResource.cache
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.AssemblyInfoInputs.cache
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.AssemblyInfo.cs
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.csproj.CoreCompileInputs.cache
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.dll
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\refint\MineSweeper.dll
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.pdb
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\MineSweeper.genruntimeconfig.cache
+D:\Проекты\MineSweeper (2)\obj\Debug\net8.0-windows\ref\MineSweeper.dll
+D:\Проекты\MineSweeper\bin\Debug\net8.0-windows\MineSweeper.exe
+D:\Проекты\MineSweeper\bin\Debug\net8.0-windows\MineSweeper.deps.json
+D:\Проекты\MineSweeper\bin\Debug\net8.0-windows\MineSweeper.runtimeconfig.json
+D:\Проекты\MineSweeper\bin\Debug\net8.0-windows\MineSweeper.dll
+D:\Проекты\MineSweeper\bin\Debug\net8.0-windows\MineSweeper.pdb
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.FieldButton.resources
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.Form1.resources
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.Properties.Resources.resources
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.csproj.GenerateResource.cache
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.AssemblyInfoInputs.cache
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.AssemblyInfo.cs
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.csproj.CoreCompileInputs.cache
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.dll
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\refint\MineSweeper.dll
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.pdb
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\MineSweeper.genruntimeconfig.cache
+D:\Проекты\MineSweeper\obj\Debug\net8.0-windows\ref\MineSweeper.dll
