@@ -85,6 +85,7 @@ namespace MineSweeper
                 if (!_isOpen)
                 {
                     Text = " ";
+                    BackColor = Color.LightGray;
                 }
                 else
                 {
@@ -94,6 +95,7 @@ namespace MineSweeper
                     }
                     else
                     {
+                        BackColor = Color.White;
                         int count = CalcMines();
                         Text = count == 0 ? " " : count.ToString();
                         if (count == 0)
@@ -127,26 +129,41 @@ namespace MineSweeper
 
         private void FieldButton_Click(object sender, EventArgs e)
         {
+            if (_form.gameOver)
+            {
+                return;
+            } 
             IsOpen = true;
             _form.FieldButtonClicked(this);
             if (IsMine)
             {
+                this.BackColor = Color.Red;
                 _form.GameOver();
             }
         }
 
         private void FieldButton_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button != MouseButtons.Right)
+            if (_form.gameOver)
             {
                 return;
             }
-            if (IsOpen)
+            if (e.Button == MouseButtons.Right)
             {
-                return;
+                if (IsOpen)
+                {
+                    return;
+                }
+                Text = Text == "F" ? " " : "F";
+                _form.FieldButtonClicked(this);
             }
-            Text = Text == "F" ? " " : "F";
-            _form.FieldButtonClicked(this);
+            if (e.Button == MouseButtons.Middle)
+            {
+                if (IsOpen)
+                {
+                    OpenNeighbors();
+                }
+            }
         }
     }
 }

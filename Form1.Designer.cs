@@ -48,7 +48,7 @@
             restartBtn.TabIndex = 0;
             restartBtn.Text = " ";
             restartBtn.UseVisualStyleBackColor = false;
-            restartBtn.Click += button1_Click;
+            restartBtn.Click += restartBtn_Click;
             // 
             // panel1
             // 
