@@ -71,12 +71,22 @@ namespace MineSweeper
                     {
                         continue;
                     }
+                    if (_buttons[i][j].Text == "F")
+                    {
+                        continue;
+                    }
                     _buttons[i][j].IsOpen = true;
+                    
+                    if (_buttons[i][j].IsMine)
+                    {
+                        _buttons[i][j].BackColor = Color.Red;
+                        _form.GameOver();
+                    }
                 }
             }
         }
 
-        public bool IsOpen
+    public bool IsOpen
         {
             get => _isOpen;
             set
@@ -162,6 +172,16 @@ namespace MineSweeper
                 if (IsOpen)
                 {
                     OpenNeighbors();
+                }
+                else
+                {
+                    IsOpen = true;
+                    _form.FieldButtonClicked(this);
+                    if (IsMine)
+                    {
+                        this.BackColor = Color.Red;
+                        _form.GameOver();
+                    }
                 }
             }
         }

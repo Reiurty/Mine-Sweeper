@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             restartBtn = new Button();
             panel1 = new Panel();
             timerText = new TextBox();
@@ -123,6 +124,9 @@
             Controls.Add(timerText);
             Controls.Add(panel1);
             Controls.Add(restartBtn);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
             Text = "MineSweeper";
             ResumeLayout(false);
